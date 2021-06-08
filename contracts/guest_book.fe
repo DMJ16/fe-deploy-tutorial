@@ -1,0 +1,8 @@
+contract GuestBook:
+  messages: map<address, string100>
+
+  pub def sign(book_msg: string100):
+      self.messages[msg.sender] = book_msg
+
+  pub def get_msg(addr: address) -> string100:
+      return self.messages[addr].to_mem()

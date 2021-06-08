@@ -1,0 +1,19 @@
+{
+  "name": "fe-deploy-tutorial",
+  "version": "1.0.0",
+  "author": "David Josephs",
+  "license": "MIT",
+  "scripts": {
+    "compile-ERC20": "./fe_mac contracts/erc20.fe --optimize --overwrite",
+    "compile-GuestBook": "./fe_mac contracts/guest_book.fe --optimize --overwrite",
+    "deploy-ERC20": "ts-node scripts/deploy-ERC20.ts",
+    "deploy-GuestBook": "ts-node scripts/deploy-GuestBook.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2",
+    "dotenv": "^10.0.0",
+    "ethers": "^5.3.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
